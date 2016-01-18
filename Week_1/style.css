@@ -1,0 +1,13 @@
+h1 {color:aquamarine;
+font-size: 4em;
+font-family:Replica-bold, "helvetica neue bold";
+}
+
+body {font-family:Replica-light, "helvetica neue";
+}
+
+p, li {
+    font-size: 1.2em;
+}
+    
+
