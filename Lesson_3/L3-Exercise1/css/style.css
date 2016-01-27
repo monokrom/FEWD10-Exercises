@@ -1,0 +1,51 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: #888;
+}
+
+h1 {
+    background-color:#ff0000;
+    padding: 20px 10px;
+    border: 3px solid #000000;
+    
+}
+
+h2 {
+    background-color:#449900;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+p {
+    background: #0000ff; /* Blue */
+    color: white;
+    padding: 5px;
+    border: 1px dashed green;
+}
+
+code {
+    background: rgb(255, 255, 255);
+    color:#222;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+ol {
+    background-color: yellow;
+    padding: 10px;
+    list-style-position:inside;
+}
+
+li {
+    line-height: 2em;
+    text-indent: 5px;
+}
