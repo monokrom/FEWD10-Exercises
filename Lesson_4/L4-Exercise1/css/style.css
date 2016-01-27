@@ -1,20 +1,20 @@
 #notification,
-.message{
-    background:beige;
+.message {
+    background: beige;
     padding: 0.5em 0.75em;
     border: 2px solid #f2f2f2;
 }
 
 #notification:after {
     content: "!";
-        font-size: 2em;
+    font-size: 2em;
     margin-right: 5px;
     color: green;
 }
 
-.message{
+.message {
     font-family: Georgia;
     font-size: 3em;
     line-height: 2;
-    font-weight:600;
+    font-weight: 600;
 }
