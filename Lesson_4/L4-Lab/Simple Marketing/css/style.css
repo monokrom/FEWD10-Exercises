@@ -22,6 +22,38 @@ html {
     height: 0;
 }
 
+header,
+div,
+footer {
+    background: #666;
+    margin: 1em 0;
+}
+
+.fifty-percent {
+    width: 48%;
+    margin-right: 4%;
+    float: left;
+}
+
+
+.thirty-percent {
+    width: 30.667%;
+    float:left;
+    margin-right:4%;
+}
+
+.thirty-percent {
+    width: 30.667%;
+}
+
+.first {
+    clear: both;
+}
+
+.last {
+    margin-right: 0;
+}
+
 header {
     background: #e67e22;
     padding: 30px 10%;
@@ -33,7 +65,9 @@ body {
     margin: auto;
 }
 
-main {}
+main {
+    margin-bottom: 20px;
+}
 
 .left,
 article,
@@ -47,7 +81,7 @@ article,
 
 .left,
 .right {
-    width: 48%;
+    width: 18%;
 }
 
 article {
@@ -58,10 +92,8 @@ article {
     margin-right: 0;
 }
 
-
-
 footer {
-    clear: left;
+    clear: both;
     padding: 30px 10%;
     background-color: #95a5a6;
 }
