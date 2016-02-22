@@ -8,6 +8,8 @@
  * Question 1:
  * When, button 1 is clicked, select all paragraphs on the page with jQuery, and changed the color to blue.
  */
+
+
  $('#button1').click(function(){
      
      $('p').css('color', 'blue');
@@ -28,8 +30,8 @@ $('#button1').click(function(){
  * Question 3:
  * When button 1 is clicked, select the ordered list item that has the class "falseFact". 
  * Using jQuery change the content to read "True Fact".
- */
 
+*/
 $('#button1').click(function(){
     
     $('.falseFact').text('True Fact');
@@ -42,9 +44,9 @@ $('#button1').click(function(){
  * Question 4: 
  * When button 2 is clicked, change the background color of the whole page to "pink"
  */
-$('#button2').click(function(){
-    
-   $('body').css('background-color', 'pink');
+$('#button2').click(function () {
+
+    $('body').css('background-color', 'pink');
 
 });
 
@@ -53,9 +55,9 @@ $('#button2').click(function(){
  * When button 2 is clicked, change the color of all h2's to "green"
  */
 
-$('#button2').click(function(){
-    
-   $('h2').css('color', 'green');
+$('#button2').click(function () {
+
+    $('h2').css('color', 'green');
 
 });
 
@@ -63,9 +65,9 @@ $('#button2').click(function(){
  * Question 6:
  * When button 2 is clicked, change the html content of all "blockquotes" to be "<span>no quote</span>"
  */
-$('#button2').click(function(){
-    
-   $('blockquote').html('<span>no quote</span>');
+$('#button2').click(function () {
+
+    $('blockquote').html('<span>no quote</span>');
 
 });
 
@@ -77,9 +79,9 @@ $('#button2').click(function(){
  * When button 3 is clicked, change the text in the header's h1 tag to read "jQuery Ninja"
  */
 
-$('#button3').click(function(){
-    
-   $('h1').text('jQuery Ninja');
+$('#button3').click(function () {
+
+    $('h1').text('jQuery Ninja');
 
 });
 
@@ -93,10 +95,10 @@ $('#button3').click(function(){
 
 
 
-$('#button3').click(function(){
-    
-  $(".city").attr("src", "http://lorempixel.com/g/500/400/food");
-alert('I changed the image!');
+$('#button3').click(function () {
+
+    $(".city").attr("src", "http://lorempixel.com/g/500/400/cats");
+    alert('I changed the image!');
 
 });
 
@@ -107,15 +109,24 @@ alert('I changed the image!');
  */
 
 
-$('#button3').click(function(){
-    
-  $('p').css({
-      color: 'blue', 
-      fontFamily: 'Georgia'
-  });
+$('#button3').click(function () {
+
+    $('p').css({
+        color: 'blue',
+        fontFamily: 'Georgia'
+    });
 
 });
 
 
+// Combine all Button1 events to one function.
 
 
+$('#button1').click(function () {
+
+    $('p').css('color', 'blue');
+    $('h2').text('Michael');
+    $('.falseFact').text('True Fact');
+
+
+});
