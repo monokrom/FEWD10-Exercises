@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+    // if our list has been stored retrieve it and display it
+    if (localStorage.getItem('storedtodos')) {
+        $('ul').html(localStorage.getItem('storedtodos'));
+    }
+
     /*
      * click handler for submit button "Add"
      * 
@@ -17,9 +22,19 @@ $(document).ready(function () {
             $('ul').prepend('<li>' + newItem + '</li>');
             // clear the text input field (using jQuery .val() function)
             $('#addItem').val('');
+
+            // us HTML5 web storage to store my ul contents (collect 'li's)
+            var todos = $('ul').html();
+            localStorage.setItem('storedtodos', todos);
+        } else {
+            // show warning message
+            $('.message').text('No item entered').addClass('warning').fadeIn().delay(1000).fadeOut();
+
         }
+
+
     });
-    
+
     /*
      * click handler for list items
      * 
@@ -39,7 +54,24 @@ $(document).ready(function () {
      */
     $('ul').on("click", "li", function () {
         // jQuery toggleClass() function will add class if element doesn't have it and remove it if it already has it
-        $(this).toggleClass('complete');
+        $(this).toggleClass('complete').promise().done(function(){
+            if($('li:not(.complete)').length==0){
+                $('.congrats').animate({
+                    left: '0'
+                });
+            }
+        });
+        
+        
     });
+
+
+    // clear button - select button and replace ul's html
+    $('footer button').click(function () {
+        $('ul').html(' ');
+        // Clear local storage
+        localStorage.clear('storedtodos');
+    });
+
 
 });

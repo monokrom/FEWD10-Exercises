@@ -1,0 +1,21 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.pc {
+    background: url(img/partly-cloudy.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.ms {
+    background: url(img/mostly-sunny.svg)
+}
